@@ -3,6 +3,7 @@ package com.prs.backoffice.log
 
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin(origins = ["*"], allowedHeaders = ["*"])
 @RestController
 @RequestMapping("/records")
 class LogController(val repository: LogRepository) {

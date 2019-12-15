@@ -4,6 +4,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
+@CrossOrigin(origins = ["*"], allowedHeaders = ["*"])
 @RestController
 @RequestMapping("/cameras")
 class CameraController(val repository: CameraRepository) {
