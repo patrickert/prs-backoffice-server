@@ -182,3 +182,10 @@ $ docker start mongo-prs
 $ docker start prs-server
 ```
 
+### To add data to Mongo
+
+```bash
+$ docker exec -it mongo-prs mongo
+> db.logs.insert({"timestamp": string, "plate": string, "url": string, "camera": number})
+```
+
