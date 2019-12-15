@@ -39,6 +39,6 @@ class CameraController(val repository: CameraRepository) {
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }
         repository.deleteById(cameraId)
-        return ResponseEntity(HttpStatus.NO_CONTENT)
+        return ResponseEntity(cameraId, HttpStatus.OK)
     }
 }

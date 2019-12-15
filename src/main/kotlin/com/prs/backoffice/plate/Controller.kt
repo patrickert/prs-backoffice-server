@@ -36,6 +36,6 @@ class PlateListController(val repository: PlateListRepository, val service: Plat
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }
         repository.deleteById(listId)
-        return ResponseEntity(HttpStatus.NO_CONTENT)
+        return ResponseEntity(listId, HttpStatus.OK)
     }
 }
