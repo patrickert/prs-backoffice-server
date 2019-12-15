@@ -10,7 +10,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `GET /`
 * Response
-```json
+```
 {
   [
     {
@@ -28,7 +28,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `GET /`
 * Response
-```json
+```
 [
   {
     "id": number,
@@ -42,7 +42,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `GET /{cameraId}`
 * Response 200
-```json
+```
   {
     "id": number,
     "name": string,
@@ -56,7 +56,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `POST /`
 * Request body
-```json
+```
   {
     "name": string,
     "code": string,
@@ -65,7 +65,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
   }
 ```
 * Response 
-```json
+```
   {
     "id": number,
     "name": string,
@@ -77,7 +77,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `PUT /`
 * Request body
-```json
+```
   {
     "id": number,
     "name": string,
@@ -97,7 +97,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `GET /`
 * Response
-```json
+```
 [
   {
     "id": number,
@@ -111,7 +111,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `GET /{listId}`
 * Response 200
-```json
+```
   {
     "id": number,
     "name": string,
@@ -125,7 +125,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `POST /`
 * Request body
-```json
+```
   {
     "name": string,
     "action": string,
@@ -134,7 +134,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
   }
 ```
 * Response 
-```json
+```
   {
     "id": number,
     "name": string,
@@ -146,7 +146,7 @@ Spring boot based API to serve as backend for PRS backoffice and dashboard.
 
 `PUT /`
 * Request body
-```json
+```
   {
     "id": number,
     "name": string,
