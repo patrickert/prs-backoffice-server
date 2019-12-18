@@ -17,13 +17,9 @@ class PlateListService(val repository: PlateListRepository) {
         return list.toPlateListDTO()
     }
 
-
-
-    private fun toPlateList(plateList: PlateListDTO) = PlateList (
-            plateList.id, plateList.name, plateList.action, plateList.metadata, plateList.list.joinToString(",")
-    )
-
-
+    fun findEmailsForPlate(plate: String): List<String> = findAll()
+            .filter { list -> list.list.contains(plate)}
+            .map { list -> list.metadata }
 
 
 }

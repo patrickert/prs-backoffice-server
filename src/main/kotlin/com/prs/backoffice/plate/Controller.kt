@@ -39,4 +39,8 @@ class PlateListController(val repository: PlateListRepository, val service: Plat
         repository.deleteById(listId)
         return ResponseEntity(listId, HttpStatus.OK)
     }
+
+    @GetMapping("/info/{plate}")
+    fun getMetadataForPlate(@PathVariable plate: String) = service.findEmailsForPlate(plate)
+
 }
