@@ -26,7 +26,7 @@ class CameraController(val repository: CameraRepository) {
     }
 
     @PutMapping
-    fun updateCamera(camera: Camera): ResponseEntity<Any> {
+    fun updateCamera(@RequestBody camera: Camera): ResponseEntity<Any> {
         if (!repository.existsById(camera.id)) {
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }

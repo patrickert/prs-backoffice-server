@@ -22,11 +22,12 @@ class PlateListController(val repository: PlateListRepository, val service: Plat
     @PostMapping
     fun newList(@RequestBody listDTO: PlateListDTO): PlateListDTO = service.newList(listDTO)
 
-    @PutMapping
-    fun updateList(list: PlateListDTO): ResponseEntity<Any> {
-        if (!repository.existsById(list.id)) {
+    @PutMapping("/{listId}")
+    fun updateList(@PathVariable("listId") listId: Long, @RequestBody list: PlateListDTO): ResponseEntity<Any> {
+        if (!repository.existsById(listId)) {
             return ResponseEntity(HttpStatus.NOT_FOUND)
         }
+        list.id = listId
         service.newList(list)
         return ResponseEntity(HttpStatus.NO_CONTENT)
     }
